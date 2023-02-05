@@ -20,6 +20,7 @@ alert("Si reprueba el curso, tendrá que volver a entregar o volver a cursar en 
 
 let nombreAlumno = prompt("ingrese a la pagina su Nombre");
 let apellidoAlumno = prompt("ingrese su Apellido");
+console.log ("Nombre y Apellido del alumno")
 console.log(nombreAlumno);
 console.log(apellidoAlumno);
 
