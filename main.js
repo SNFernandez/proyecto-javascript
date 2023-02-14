@@ -1,21 +1,24 @@
-let alumnoUsuario = "coder"
-let passwordUsuario = "coder"
-let intentos = 0
-const maxIntentos = 3
-let usuarioIngresado = prompt("Ingrese su usuario")
-let passwordIngresado = prompt("Ingrese su contraseña")
-if (usuarioIngresado === alumnoUsuario && passwordIngresado === passwordUsuario) {
-    alert("Puede ingresar, todos los datos son validos.");
-} else {
-    alert("No puede ingresar, los datos son invalidos")
-} while (usuarioIngresado != alumnoUsuario && passwordIngresado != passwordUsuario) {
-    alumnoUsuario = "coder"
-    passwordUsuario = "coder"
-    usuarioIngresado = prompt("Ingrese su usuario")
-    passwordIngresado = prompt("Ingrese su contraseña")
+let alumnoUsuario = "coder";
+let passwordUsuario = "coder";
+let intentos = 0;
+const maxIntentos = 3;
+
+while (intentos < maxIntentos) {
+    let usuarioIngresado = prompt("Ingrese su usuario").toLowerCase();
+    let passwordIngresado = prompt("Ingrese su contraseña").toLowerCase();
+
+    if (usuarioIngresado === alumnoUsuario && passwordIngresado === passwordUsuario) {
+        alert("Puede ingresar, todos los datos son válidos.");
+        break;
+    } else {
+        intentos++;
+        alert("No puede ingresar, los datos son inválidos");
+    }
 }
 
-
+if (intentos === maxIntentos) {
+    alert("Ha alcanzado el máximo número de intentos permitidos, por favor intente más tarde");
+}else {
 alert("Bienvenidos alumnos a la pagina del Instituto.");
 alert("Tendran que ingresar sus datos personales e incluso todas sus notas, para evaluarles si lograron aprobar el curso asignado.");
 alert("Si reprueba el curso, tendrá que volver a entregar o volver a cursar en función de la calificación final obtenida.");
@@ -115,4 +118,6 @@ const deudas = [
 ];
 
 const deudasPendientes = deudas.filter(deuda => deuda.cuota === "Deuda");
+console.log("Las Deudas:")
 console.log(deudasPendientes);
+}
