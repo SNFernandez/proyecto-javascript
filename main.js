@@ -90,7 +90,7 @@ notaBaja = Math.min(...alumnos.map(alumno => alumno.promedio))
 const alumnoNotaBaja = alumnos.find(alumno => alumno.promedio === notaBaja)
 console.log("El alumno con la nota mas alta es: " + alumnoNotaAlta.nombre, alumnoNotaAlta.apellido)
 console.log(`Su nota mas alta fue: ${notaAlta}`)
-console.log("El alumno con la nota mas alta es: " + alumnoNotaBaja.nombre, alumnoNotaBaja.apellido)
+console.log("El alumno con la nota mas baja es: " + alumnoNotaBaja.nombre, alumnoNotaBaja.apellido)
 console.log(`Su nota mas baja fue: ${notaBaja}`)
 
 const cuotaAlumno = prompt("Ingrese |Pagado| o |Deuda| dependiendo si pago o no la cuota.")
