@@ -121,3 +121,8 @@ const deudasPendientes = deudas.filter(deuda => deuda.cuota === "Deuda");
 console.log("Las Deudas:")
 console.log(deudasPendientes);
 }
+
+const name = document.getElementById ("names")
+names.innerText = nombreAlumno + apellidoAlumno
+
+
