@@ -5,17 +5,66 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
     <title>3era Entrega|JS</title>
 </head>
 
 <body>
     <h1 id="titulo">3era entrega de JS</h1>
-    <h2 id="names">1</h2>
-    <h2 id="">2</h2>
-    <h3 id="">3</h3>
-    <h3 id="">4</h3>
+    <hr>
+    <center>
+        <form id="form">
+            <label for="usuario">Usuario</label>
+            <input type="text" id="user">
+            <label for="contrasena">Contraseña</label>
+            <input type="password" id="password">
+            <input id="boton" type="submit" value="Iniciar Sesion">
+        </form>
+    </center>
+    <hr>
+    <div class="container" id="container">
+        <form id="nombres">
+            <h4>Ingrese su nombre completo</h4>
+            <label for="">Nombre</label>
+            <input type="text" id="nombre">
+            <label for="">Apellido</label>
+            <input type="text" id="apellido">
+            <input type="submit" value="Enviar">
+        </form>
+        <hr>
+        <form id="calificacion">
+            <h4>Ingrese todas sus notas del curso.</h4>
+            <label>Nota 1 </label>
+            <input type="number" id="nota1">
+            <label>Nota 2</label>
+            <input type="number" id="nota2">
+            <label>Nota 3</label>
+            <input type="number" id="nota3">
+            <label>Nota 4</label>
+            <input type="number" id="nota4">
+            <input type="submit" value="Enviar">
+        </form>
+        <hr>
+        <form id="recuperar">
+            <label for="">Ingrese la Nota del recuperatorio</label>
+            <input type="number" id="recuperatorio">
+            <input type="submit" value="Enviar">
+        </form>
+        <hr>
+        <form id="estado">
+            <h4>Ingrese |Pagado| o |Deuda| dependiendo si pago o no la cuota.</h4>
+            <label for="">Estado de la cuenta</label>
+            <input type="text" id="estados">
+            <input type="submit" value="Enviar">
+        </form>
+        <hr>
+        <h2 id="alumno">1</h2>
+        <h2 id="notas">2</h2>
+        <h3 id="notare">3</h3>
+        <h3 id="pagos">4</h3>
+    </div>
 
-<div id="contenedor"></div>
+    <div id="contenedor"></div>
 
 
     <script src="main.js"></script>
