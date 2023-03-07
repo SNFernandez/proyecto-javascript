@@ -37,6 +37,8 @@ function nombreCompleto() {
 
     alumno.innerHTML = `Nombre y Apellido del alumno: <p>${nombreAlumno}  ${apellidoAlumno}</p>`
     console.log("El nombre del Alumno es: " + nombreAlumno + apellidoAlumno)
+    localStorage.setItem("nombre", nombreAlumno)
+    localStorage.setItem("apellido", apellidoAlumno)
 }
 
 
@@ -56,14 +58,19 @@ function sumarNotas() {
     console.log("el promedio es", promedioFinal)
     const notas = document.getElementById("notas")
     notas.innerText = `La nota del promedio final es: ${promedioFinal}`
+    const mensaje = document.getElementById("mensaje")
+    localStorage.setItem("promedio", promedioFinal)
 
     let aprobado = true;
     if (promedioFinal >= 6) {
+        mensaje.innerText = `Aprobaste el curso, Felicidades`
         console.log("Aprobaste el curso, Felicidades");
     } else if (promedioFinal >= 4 && promedioFinal <= 5.9) {
+        mensaje.innerText = `Tenes que realizar otra entrega para aprobar el curso`
         console.log("Tenes que realizar otra entrega para aprobar el curso");
     } else {
         (promedioFinal >= 0 && promedioFinal >= 3.9);
+        mensaje.innerText = `Reprobaste el curso,volve a intentarlo en el proximo`
         console.log("Reprobaste el curso,volve a intentarlo en el proximo");
     }
     const nombreAlumno = document.getElementById("nombre").value
@@ -100,12 +107,18 @@ function recuperatorio() {
     const recuperatorioEntrega = Number(document.getElementById("recuperatorio").value)
     const notare = document.getElementById("notare")
     notare.innerText = `La nota del recuperatorio es:  ${recuperatorioEntrega}`
+    const mensajere = document.getElementById("mensajere")
+    localStorage.setItem("recuperatorio", recuperatorioEntrega)
 
     if (recuperatorioEntrega >= 6) {
         console.log("Aprobaste el recuperatorio, Felicidades")
+        mensajere.innerText = `Aprobaste el recuperatorio, Felicidades`
+
         console.log("La nota del recuperatorio es:", recuperatorioEntrega)
     } else if (recuperatorioEntrega < 6) {
         console.log("Desaprobaste el recuperatorio, volve a recursar")
+        mensajere.innerText = `Desaprobaste el recuperatorio, volve a recursar`
+
         console.log("La nota del recuperatorio es:", recuperatorioEntrega)
     }
 }
@@ -121,6 +134,7 @@ function situacion() {
     const cuotaAlumno = document.getElementById("estados").value
     const pago = document.getElementById("pagos")
     pago.innerText = `El estado de la cuenta es: ${cuotaAlumno}`
+    localStorage.setItem ("estado", cuotaAlumno)
 
     const nombreAlumno = document.getElementById("nombre").value
     const apellidoAlumno = document.getElementById("apellido").value
@@ -165,6 +179,8 @@ formulario.addEventListener("submit", (e) => {
         console.log("Puede ingresar, todos los datos son válidos.")
 
         container.classList.remove("container");
+        localStorage.setItem("user", alumnoUsuario)
+        localStorage.setItem("password", passwordUsuario)
 
     } else {
         intentos++;
